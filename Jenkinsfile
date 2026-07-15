@@ -3,6 +3,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/saidurga-git/Jenkins_CI_Demo.git'
+            }
+        }
 
         stage('Compile C Code') {
             steps {
