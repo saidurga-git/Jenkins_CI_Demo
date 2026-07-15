@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage('Archive Build') {
+        stage('Archive build') {
             steps {
                 archiveArtifacts artifacts: 'app'
             }
